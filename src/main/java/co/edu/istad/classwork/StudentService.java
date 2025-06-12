@@ -31,7 +31,6 @@ public class StudentService {
     public boolean updateStudentById(int id, Student newStudent) {
         for (Student student : students) {
             if (student.getId().equals(id)) {
-                students.remove(student);
                 student.setFullName(newStudent.getFullName());
                 student.setGender(newStudent.getGender());
                 student.setScore(newStudent.getScore());
