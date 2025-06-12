@@ -41,12 +41,6 @@ public class StudentService {
     }
 
     public boolean deleteStudentById(int id) {
-        for (Student student : students) {
-            if (student.getId().equals(id)) {
-                students.remove(student);
-            }
-            return true;
-        }
-        return false;
+        return students.removeIf(s -> s.getId() == id);
     }
 }
